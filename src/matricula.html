@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Matrícula - Curso Front-End</title>
+</head>
+<body style="margin:0; font-family:Arial, sans-serif; background-color:#f2f2f2;">
+
+    <!-- TOPO -->
+    <header style="background-color:#8c8c8c; color:white; text-align:center; padding:50px 20px;">
+        <h1 style="margin:0; font-size:42px;">Formulário de Matrícula</h1>
+        <p style="font-size:22px; margin-top:12px;">Preencha seus dados para se matricular</p>
+    </header>
+
+    <!-- MENU -->
+    <nav style="background-color:#6f6f6f; padding:15px; text-align:center;">
+        <a href="index.html" style="color:white; text-decoration:none; margin:0 20px; font-size:18px;">Início</a>
+        <a href="html.html" style="color:white; text-decoration:none; margin:0 20px; font-size:18px;">HTML</a>
+        <a href="css.html" style="color:white; text-decoration:none; margin:0 20px; font-size:18px;">CSS</a>
+        <a href="js.html" style="color:white; text-decoration:none; margin:0 20px; font-size:18px;">JavaScript</a>
+        <a href="tailwind.html" style="color:white; text-decoration:none; margin:0 20px; font-size:18px;">TailWind</a>
+    </nav>
+
+    <!-- FORMULÁRIO -->
+    <section style="padding:60px 20px;">
+        <div style="max-width:650px; margin:auto; background:white; padding:40px; border-radius:20px; box-shadow:0 6px 18px rgba(0,0,0,0.12);">
+            
+            <h2 style="text-align:center; font-size:34px; color:#555; margin-bottom:30px;">
+                Faça sua matrícula
+            </h2>
+
+            <!-- BLOCO DO FORM -->
+            <div id="formulario-box">
+                <form id="form-matricula">
+                    
+                    <label style="font-size:18px; color:#333;">Nome completo:</label><br>
+                    <input id="nome" type="text" required
+                        style="width:100%; padding:14px; margin:10px 0 20px 0; border:1px solid #ccc; border-radius:10px; font-size:16px; box-sizing:border-box;"><br>
+
+                    <label style="font-size:18px; color:#333;">E-mail:</label><br>
+                    <input id="email" type="email" required
+                        style="width:100%; padding:14px; margin:10px 0 20px 0; border:1px solid #ccc; border-radius:10px; font-size:16px; box-sizing:border-box;"><br>
+
+                    <label style="font-size:18px; color:#333;">Telefone:</label><br>
+                    <input id="telefone" type="tel" required
+                        style="width:100%; padding:14px; margin:10px 0 20px 0; border:1px solid #ccc; border-radius:10px; font-size:16px; box-sizing:border-box;"><br>
+
+                    <label style="font-size:18px; color:#333;">Curso desejado:</label><br>
+                    <select id="curso" required
+                        style="width:100%; padding:14px; margin:10px 0 25px 0; border:1px solid #ccc; border-radius:10px; font-size:16px; box-sizing:border-box;">
+                        <option value="">Selecione um curso</option>
+                        <option>HTML</option>
+                        <option>CSS</option>
+                        <option>JavaScript</option>
+                        <option>Tailwind CSS</option>
+                    </select>
+
+                    <button type="button" onclick="enviarMatricula()"
+                        style="width:100%; padding:16px; background-color:#777; color:white; border:none; border-radius:12px; font-size:20px; cursor:pointer;">
+                        Enviar Matrícula
+                    </button>
+                </form>
+            </div>
+
+            <!-- MENSAGEM DE SUCESSO -->
+            <div id="mensagem-sucesso"
+                style="display:none; margin-top:30px; padding:25px; background-color:#e6ffe6; color:#2d7a2d; border:2px solid #9be29b; border-radius:14px; font-size:20px; text-align:center; line-height:1.7;">
+                <strong>Seu formulário foi enviado com sucesso!</strong><br><br>
+                Logo mais um de nossos atendentes online entrará em contato com você!
+                Agradecemos pela preferência!
+            </div>
+           <div style="margin-top:40px; text-align:center;">
+                <a href="index.html" style="display:inline-block; padding:15px 30px; background-color:#777; color:white; text-decoration:none; font-size:18px; border-radius:10px; margin:10px;">
+                    Voltar ao Início
+                </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background-color:#6f6f6f; color:white; text-align:center; padding:20px;">
+        <p style="margin:0;">&copy; 2026 Curso Front-End - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function enviarMatricula() {
+            let nome = document.getElementById("nome").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let telefone = document.getElementById("telefone").value.trim();
+            let curso = document.getElementById("curso").value.trim();
+
+            if (nome === "" || email === "" || telefone === "" || curso === "") {
+                alert("Por favor, preencha todos os campos antes de enviar a matrícula.");
+                return;
+            }
+
+            document.getElementById("formulario-box").style.display = "none";
+            document.getElementById("mensagem-sucesso").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
