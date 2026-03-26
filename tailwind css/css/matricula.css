@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 80px;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+
+  .conteudo {
+    max-width: 700px;
+  }
+  
+  .conteudo h1 {
+    color: #14b8a6;
+    font-size: 48px;
+    margin-bottom: 25px;
+  }
+  
+  .conteudo p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  
+  .oculto {
+    display: none;
+  }
+  
+  #toggle {
+    color: #ff1464;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+
+  .info {
+    margin-top: 30px;
+    font-size: 18px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nivel {
+    color: #14b8a6;
+  }
+  
+
+  #matricular {
+    margin-top: 40px;
+    background: #ff1464;
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #matricular:hover {
+    background: #e60055;
+    transform: scale(1.05);
+  }
+  
+
+  .box {
+    background: #eee;
+    padding: 25px;
+    border-radius: 12px;
+    width: 320px;
+  }
+  
+  .trilha {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .curso-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .icone {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  
+  .curso-box h3 {
+    margin: 0;
+  }
+  
+  .curso-box a {
+    color: #ff1464;
+    text-decoration: none;
+    font-weight: bold;
+  }
